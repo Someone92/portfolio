@@ -1,0 +1,60 @@
+.clear {
+    clear: both;
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: $roboto;
+    height: 100%;
+    width: 100%;
+}
+body {
+    @extend html;
+    overflow-y: scroll;
+    background: $background;
+}
+
+a {
+    text-decoration: none;
+    color: $link;
+}
+
+p { font-family: $roboto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: $white; font-family: $opensans; }
+
+h3 {
+    color: $link-hover;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+    padding-top: 20px;
+    position: relative;
+    text-transform: uppercase;
+    margin: 15px 0;
+    &:before {
+        background: $link-hover;
+        content: "";
+        height: 8px;
+        position: absolute;
+        top: 5px;
+        width: 64px;
+    }
+}

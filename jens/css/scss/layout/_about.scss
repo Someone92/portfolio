@@ -1,0 +1,50 @@
+#about {
+    width: 100%;
+    &:after {
+        content: "";
+        position: relative;
+        display: inherit;
+        bottom: 0;
+        width: 80%;
+        margin: 0 auto;
+        height: 1px;
+        background: #dddddd;
+    }
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        .about-text {
+            width: 60%;
+            float: left;
+            flex: 1;
+            padding-bottom: 20px;
+            h3 {
+                font-size: 2.5rem;
+                &:before { width: 85px; }
+            }
+            h4 {
+                color: $text;
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                margin: $s-space 0 0 0;
+                text-align: justify;
+            }
+        }
+        .about-picture {
+            width: 40%;
+            float: right;
+            flex: 1;
+            position: relative;
+            text-align: center;
+            img {
+                width: 100%;
+                position: relative;
+                vertical-align: bottom;
+            }
+        }
+    }
+}

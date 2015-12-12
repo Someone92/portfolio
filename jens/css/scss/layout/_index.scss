@@ -1,0 +1,46 @@
+#portfolio {
+    padding: 0.8rem 0 1.5rem 0;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+        margin-left: 1%;
+        font-size: 2.5rem;
+        text-transform: none;
+        text-align: left;
+        &:before { width: 85px; }
+    }
+    .flex {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: center;
+        .portfolio-flex {
+            flex: 1 auto;
+            flex-grow: 0;
+            width: 31%;
+            margin: 1%;
+            background: #e5e5e5;
+            @include z-depth(1);
+            a {
+                display: inline-block;
+                font-size: 0;
+                img {
+                    width: 100%;   
+                }
+            }
+            .text {
+                width: 100%;
+                line-height: 30px;
+                font-size: 1rem;
+                background: $white;
+                border: 1px solid #E8E8E8;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+}

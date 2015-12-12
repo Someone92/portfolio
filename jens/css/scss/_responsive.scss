@@ -1,0 +1,145 @@
+/* $xl-breakpoint = 1040px */
+@media screen and (max-width: $xl-breakpoint) {
+    #about {
+        &:after { width: 90%; }
+    }
+}
+@media screen and (max-width: $xl-breakpoint) and (min-width: $large-breakpoint) {
+    #about { 
+        .about-container { 
+            padding: 0 30px 20px;
+            .about-picture {
+                img {
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                }
+            }
+        } 
+    }
+    #portfolio {
+        .container {
+            padding: 0 30px 20px;
+            h3.indexh3 {
+                margin-left: 0;   
+            }
+        }
+    }
+}
+
+/* $large-breakpoint = 930px; */
+@media screen and (max-width: $large-breakpoint) {
+    #about {
+        .about-container { 
+            flex-direction: column; 
+            .about-text {
+                width: 100%;
+                float: none;
+            }
+            .about-picture {
+                width: 100%;
+                float: none;
+                margin-top: 10px;
+            }
+        }
+    }
+    .project-item { width: 47%; }
+    .project-client {
+        .project-url {
+            .project-site {
+                font-size: 1.2rem;
+                width: 70%;
+                margin: 20px auto 0;
+                a { width: 80%; }
+            }
+        }
+    }
+}
+@media screen and (max-width: $large-breakpoint) and (min-width: $medium-breakpoint) {
+    #about {
+        .about-container {
+            .about-picture {
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+/* $medium-breakpoint = 640px */
+@media screen and (max-width: $medium-breakpoint) {
+    /* header.php */
+    #background {
+        .welcome-text {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    }
+    /* navigation.php */
+    nav {
+        ul { display: none; }
+        .hamburger {
+            display: inline-block;
+        }
+    }
+    
+    /* index.php */
+    .project-item {
+        width: 100%;
+        margin: 2% 0;
+    }
+    /* portfolio.php */
+    .project-header {
+        img {
+            width: 100%;
+        }
+    }
+    .project-client {
+        .project-about,
+        .project-url {
+            width: 100%;
+            margin: 0;
+        }
+        .project-about {
+            margin: 0 0 40px 0;
+        }
+        .project-url {
+            border: 0;
+            .project-service {
+                padding: 0;
+                a:nth-of-type(odd),
+                a:nth-of-type(even){
+                    float: none;
+                    display: block;
+                }
+            }
+        }
+    }
+    .project-gallery {
+        img {
+            width: 100%;
+            margin: 0 0 2% 0;
+        }
+    }
+}
+
+/* $small-breakpoint = 340px; */
+@media screen and (max-width: $small-breakpoint) {
+    /* header.php */
+    #background {
+        .welcome-text {
+            h1 { font-size: 2.5rem; }
+        }
+    }
+    /* portfolio.php */
+    .project-client {
+        .project-url {
+            .project-site {
+                a {
+                    width: 100%;   
+                }
+            }
+        }
+    }
+}

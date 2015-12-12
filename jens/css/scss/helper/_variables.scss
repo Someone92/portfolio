@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////
+// Color Variables
+////////////////////////////////////////////////////////////
+$white: #FFFFFF;
+$gray: #CCCCCC;
+$black: #000000;
+
+$red: #EB1E23;
+$blue: #3F459C;
+$green: #97CA3A;
+$yellow: #EECF30;
+
+$background: #EEEEEE;
+$nav: #1E425A;
+$footer: #1E425A;
+
+$text: #1E425A;
+$link: darken($gray, 55%);
+$link-hover: #91AEC1;
+
+$twitter: #55ACEE;
+$github: #4183C4;
+$stackoverflow: #FE7A15;
+$linkedin: #0077B5;
+$codepen: $black;
+
+////////////////////////////////////////////////////////////
+// Font Variables
+////////////////////////////////////////////////////////////
+$opensans: "Open Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+////////////////////////////////////////////////////////////
+// Spacing Variables
+////////////////////////////////////////////////////////////
+$m-space: 40px;                 // 40px
+$s-space: $m-space / 2;         // 20px
+$l-space: $m-space * 2;         // 80px
+
+$xs-space: $s-space / 2;        // 10px;
+$xl-space: $l-space * 2;        // 160px;
+
+////////////////////////////////////////////////////////////
+// Breakpoints
+////////////////////////////////////////////////////////////
+$small-breakpoint: 340px;
+$medium-breakpoint: 640px;
+$large-breakpoint: 930px;
+$xl-breakpoint: 1040px;

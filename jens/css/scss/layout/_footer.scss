@@ -1,0 +1,39 @@
+footer {
+    padding: $m-space 0 $s-space 0;
+    text-align: center;
+    background: $footer;
+    ul {
+        max-width: 1200px;
+        margin: 0 auto 20px;
+        li {
+            min-width: 95px;
+            display: inline-block;
+            list-style: none;
+            font-size: 1.5rem;
+            margin: 0 $s-space;
+            a {
+                color: $white;
+                font-size: 1rem;
+                @include transition(color 0.3s ease);
+                &:hover {
+                    &.twitter { color: $twitter; }
+                    &.github { color: $github; }
+                    &.stackoverflow { color: $stackoverflow; }
+                    &.linkedin { color: $linkedin; }
+                    &.codepen { color: $codepen; }
+                }
+            }
+        }
+    }
+    .email,
+    .copyright {
+        color: darken($white, 30%);
+        font-size: 0.7rem;
+        a {
+            color: inherit;
+            @include transition(color 0.3s ease);
+            &:hover { color: $link-hover; }
+        }
+    }
+    .copyright { margin-top: 5px; }
+}

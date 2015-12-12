@@ -1,0 +1,28 @@
+header#background {
+    display: inline-block;
+    height: calc(100vh - 85px);
+    width: 100%;
+    background: url("../img/background.png");
+    background: linear-gradient(rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.6)), url("../img/background.png") no-repeat center center fixed;
+    @include background-size(cover);
+}
+
+.welcome-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+    h1 {
+        color: #F5F5F5;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        margin: 0;
+    }
+    h2 {
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        color: darken(#ff5a1d, 10%);
+    }
+}

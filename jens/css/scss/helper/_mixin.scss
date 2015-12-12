@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////
+// Background
+////////////////////////////////////////////////////////////
+@mixin background-size($cover) {
+    background-size: $cover;
+}
+
+////////////////////////////////////////////////////////////
+// Transition
+////////////////////////////////////////////////////////////
+@mixin transition($transition) {
+    transition: $transition;
+}
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: $transition-delay;
+       -moz-transition-delay: $transition-delay;
+        -ms-transition-delay: $transition-delay;
+         -o-transition-delay: $transition-delay;
+            transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration) {
+    -webkit-transition-duration: $transition-duration;
+       -moz-transition-duration: $transition-duration;
+        -ms-transition-duration: $transition-duration;
+         -o-transition-duration: $transition-duration;
+            transition-duration: $transition-duration;
+}
+
+////////////////////////////////////////////////////////////
+// Transform
+////////////////////////////////////////////////////////////
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+        -ms-transform: $transform;
+            transform: $transform;
+}
+
+////////////////////////////////////////////////////////////
+// Border
+////////////////////////////////////////////////////////////
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+////////////////////////////////////////////////////////////
+// Linear-Gradient
+////////////////////////////////////////////////////////////
+@mixin linear-gradient($direction, $color-stops...) {
+  @if is-direction($direction) == false {
+    $color-stops: ($direction, $color-stops);
+    $direction: 180deg;
+  }
+  
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+////////////////////////////////////////////////////////////
+// Flexbox
+////////////////////////////////////////////////////////////
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+////////////////////////////////////////////////////////////
+// Vertical align anything
+////////////////////////////////////////////////////////////
+@mixin middle-3-lines() {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+////////////////////////////////////////////////////////////
+// Box-shadow z-depth
+////////////////////////////////////////////////////////////
+@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+    $params: $shadow1;
+    @if $shadow2 != false {
+        $params: $shadow1, $shadow2;
+        @if $shadow3 != false {
+            $params: $shadow1, $shadow2, $shadow3;
+            @if $shadow4 != false {
+                $params: $shadow1, $shadow2, $shadow3, $shadow4;
+                @if $shadow5 != false {
+                    $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5;
+                }
+            }
+        }
+    }
+    box-shadow: $params;
+}
+
+@mixin z-depth($level){
+    @if ($level == 1) {
+        @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));   
+    } @else if ($level == 2) {
+        @include box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+    } @else if ($level == 3) {
+        @include box-shadow(0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19));
+    } @else if ($level == 4) {
+        @include box-shadow(0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21));
+    } @else if ($level == 5) {
+        @include box-shadow(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
+    }
+}
+
+////////////////////////////////////////////////////////////
+// Clearfix
+////////////////////////////////////////////////////////////
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,92 @@
+/* portfolio/container styling _index.scss */
+.project-container {
+    width: 100%;
+    max-width: 940px;
+    margin: 50px auto 0;
+}
+.project-header {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0 0 50px 0;
+    img { width: 100%; }
+}
+.project-client {
+    margin: 50px 0 0 0;
+    text-align: left;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0 0 50px 0;
+
+    .project-about,
+    .project-url {
+        width: 45%;
+        margin: 0 2.5%;
+    }
+    .project-about {
+        float: left;
+        h4 {
+            font-size: 1.3rem;
+            color: $text;
+            &:first-of-type { margin: 10px 0 0 0; }
+            &:last-of-type { margin: 20px 0 0 0; }
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 5px 0 0 0;
+            text-align: left;
+        }
+    }
+    .project-url {
+        float: right;
+        border-left: 1px solid #DDDDDD;
+        .project-service {
+            width: 100%;
+            padding: 0 0 0 40px;
+            h5 {
+                color: $text;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            a {
+                color: #0087ce;
+                display: inline-block;
+                margin: 5px 0;
+                width: 50%;
+                &:hover { color: #333333; }
+            }
+        }
+        .project-site {
+            text-align: center;
+            margin: 20px 0 0 0;
+            a {
+                background-color: rgb(131,131,131);
+                color: $white;
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: 25px 40px;
+                text-align: center;
+                display: inline-block;
+                width: 50%;
+                @include border-radius(3px);
+                &:hover { background-color: #404040; }
+            }
+        }
+    }
+}
+
+.project-gallery {
+    padding: 0 0 50px 0;
+    font-size: 0;
+    h3 { text-align: left; text-transform: none; }
+    &:not(:last-child) { border-bottom: 1px solid #DDDDDD; }
+    img {
+        width: 48%;
+        margin: 1%;
+    }
+    p {
+        max-width: 600px;
+        margin: auto;
+        font-size: 1.1rem;
+        line-height: 30px;
+        font-weight: 300;
+    }
+}
